@@ -162,9 +162,12 @@ cython_debug/
 #.idea/
 
 checkpoints/
+.mcp.json
 .vscode/
 scratch*
 *.pkl
 input/
 output/
 preds/
+3DLandData/
+.DS_Store
