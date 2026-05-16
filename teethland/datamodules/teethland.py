@@ -76,6 +76,7 @@ class TeethLandDataModule(TeethBinSegDataModule):
                 seg_root=self.root,
                 landmarks_root=self.landmarks_root,
                 files=train_files,
+                norm=self.norm,
                 clean=self.clean,
                 transform=train_transforms,
             )
@@ -84,6 +85,7 @@ class TeethLandDataModule(TeethBinSegDataModule):
                 seg_root=self.root,
                 landmarks_root=self.landmarks_root,
                 files=val_files,
+                norm=self.norm,
                 clean=self.clean,
                 transform=default_transforms,
             )

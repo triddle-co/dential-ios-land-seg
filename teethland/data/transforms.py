@@ -718,7 +718,7 @@ class MatchLandmarksAndTeeth:
             mesial_idxs = np.unravel_index(dists.argmin(), dists.shape)
             mesial_idxs = np.nonzero(mesial)[0][list(mesial_idxs)]
             mesial[mesial_idxs] = False
-            if landmark_coords[mesial_idxs][:, 1].ptp() < 2 * self.move:
+            if np.ptp(landmark_coords[mesial_idxs][:, 1]) < 2 * self.move:
                 if landmark_coords[mesial_idxs[0], 0] < landmark_coords[mesial_idxs[1], 0]:
                     moved_coords[mesial_idxs[0], 0] -= self.move
                     moved_coords[mesial_idxs[1], 0] += self.move
